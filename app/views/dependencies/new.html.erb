@@ -1,0 +1,11 @@
+<%= form_tag dependencies_path, :method => :post do |f| %>
+  <%= text_area_tag :dependents, @dependency.input_lines, :rows => 10, :cols => 40 %><br />
+  <%= submit_tag 'Calculate Dependencies' %>
+<% end %>
+</br></br>
+<% unless @dependency.class_names.blank? %>
+  <strong>RESULTS - Dependencies for each item</strong>
+  <% @dependency.class_names.each do |key,value| %>
+    <p><%= key %> - <%= @dependency.dependencies_for(key) %></p>
+  <% end %>
+<% end %>

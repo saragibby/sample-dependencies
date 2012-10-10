@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Dependency App</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <h1>Sample Dependency App</h1>
+  
+  <p>Enter a letter followed by it's dependent letters, separated by spaces. Different dependencies can be entered on newlines.</p>
+  <p>Sample (A is dependent on B and C): A B C</p>
+
+  <%= yield %>
+
+</body>
+</html>
